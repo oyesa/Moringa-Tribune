@@ -1,0 +1,8 @@
+
+
+__DEFINING APP CONFIG. IN PROJECT__
+Step 1: define our applications configurations inside our project in settings.py
+Inside settings.py file add the app configuration <news.apps.NewsConfig>  inside our INSTALLED_APPS settings. 
+
+
+__CREATING TEMPLATES__
