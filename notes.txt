@@ -1,4 +1,7 @@
+__OTHER REF RESOURCES__
 https://docs.djangoproject.com/en/4.0/intro/tutorial01/
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+
 
 __START__
 -python3.8 -m venv --without-pip virtual
@@ -54,6 +57,9 @@ __Django Admin__
 python manage.py createsuperuser : This command prompts you to add a username and password for superuser formation.
 
 Adding Models to the Admin Page:  Inside our app's admin.py we add the models to our administration page.
+
+
+__Basic Form__
 
 
 
