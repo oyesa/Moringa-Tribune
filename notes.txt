@@ -24,7 +24,35 @@ $ pip install django-bootstrap-v5
 
 __Connecting To Postgres__
 Step 1 : Install database dependency: pip install psycopg2
+Step 2 : Create a Postgres database for our project: 
+(virtual)$ psql
+oyesa=# CREATE DATABASE tribune;
+Step 3: Change project database settings to use Postgres: settings.py >>
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tribune',
+        'USER': '<Your Database Username >',
+    'PASSWORD':'<Your Database Password>',
+    }
 
+Step 4: Setting the Timezone >>settings.py>>TIME_ZONE = 'Africa/Nairobi'
+
+Step 5: Initial Migration: python3.8 manage.py migrate
+
+after creating models: First: Run Checks>>python3.8 manage.py check
+Second: Make Migrations>>python manage.py makemigrations news
+Third: View Migration>>python3.8 manage.py sqlmigrate news 0001
+Fourth: Run Migration>>python3.8 manage.py migrate
+
+
+
+
+
+__Basic Database Queries__
+python manage.py shell
+
+__DEFINITIONS__
+A model is basically a description of data in the database. 
 
 
 
