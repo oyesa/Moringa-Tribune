@@ -1,3 +1,15 @@
+https://docs.djangoproject.com/en/4.0/intro/tutorial01/
+
+__START__
+-python3.8 -m venv --without-pip virtual
+-source virtual/bin/activate
+-curl https://bootstrap.pypa.io/get-pip.py | python
+-pip install django==4.0.4
+-python3.8
+>>>import django
+>>>django.get_version()
+-django-admin startproject <name of app>
+-python3.8 manage.py runserver
 
 
 __DEFINING APP CONFIG. IN PROJECT__
@@ -6,3 +18,15 @@ Inside settings.py file add the app configuration <news.apps.NewsConfig>  inside
 
 
 __CREATING TEMPLATES__
+
+
+$ pip install django-bootstrap-v5
+
+__Connecting To Postgres__
+Step 1 : Install database dependency: pip install psycopg2
+
+
+
+
+
+
