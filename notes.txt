@@ -62,11 +62,14 @@ Adding Models to the Admin Page:  Inside our app's admin.py we add the models to
 __Basic Form__
 
 
+__Uploading Images__
+pip install pillow
 
 
 __ERRORS__
-TypeError: __init__() missing 1 required positional argument: 'on_delete' >>> To solve this issue, you need to add the on_delete parameter.
+1. TypeError: __init__() missing 1 required positional argument: 'on_delete' >>> To solve this issue, you need to add the on_delete parameter.
 e.g.: parent = models.ForeignKey(Parent, on_delete=models.CASCADE) Refer:https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.ForeignKey
+
 
 
 
@@ -75,6 +78,7 @@ python manage.py shell
 
 __DEFINITIONS__
 A model is basically a description of data in the database. 
+A URLconf maps URL patterns to views.
 
 
 
