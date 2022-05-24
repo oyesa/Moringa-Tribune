@@ -55,9 +55,6 @@ python manage.py createsuperuser : This command prompts you to add a username an
 
 Adding Models to the Admin Page:  Inside our app's admin.py we add the models to our administration page.
 
-__Displaying Model Data__
-
-
 
 
 
