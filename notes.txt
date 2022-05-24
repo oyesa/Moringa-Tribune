@@ -50,10 +50,17 @@ Run python manage.py makemigrations to create migrations for those changes
 Run python manage.py migrate to apply those changes to the database.
 
 
+__Django Admin__
+python manage.py createsuperuser : This command prompts you to add a username and password for superuser formation.
+
+Adding Models to the Admin Page:  Inside our app's admin.py we add the models to our administration page.
+
+
+
+
 __ERRORS__
 TypeError: __init__() missing 1 required positional argument: 'on_delete' >>> To solve this issue, you need to add the on_delete parameter.
 e.g.: parent = models.ForeignKey(Parent, on_delete=models.CASCADE) Refer:https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.ForeignKey
-
 
 
 

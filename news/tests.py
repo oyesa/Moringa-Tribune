@@ -17,3 +17,13 @@ class EditorTestClass(TestCase):
         self.james.save_editor()
         editors = Editor.objects.all()
         self.assertTrue(len(editors) > 0)
+
+    #Testing Delete Method
+    # def test_delete_method(self):
+    #   self.james.delete
+
+
+    #Testing Display All Method
+
+
+    #Testing Update Single Object
