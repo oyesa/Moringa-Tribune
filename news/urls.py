@@ -5,10 +5,10 @@ from . import views
 
 urlpatterns=[
     # path('', views.welcome, name='welcome'),
-    path('',views.news_of_day,name='newsToday'),
+    path('',views.news_today,name='newsToday'),
     path('archives/(\d{4}-\d{2}-\d{2})/',views.past_days_news,name = 'pastNews'),
     path('search/', views.search_results, name='search_results'),
-    path('article/', views.articlle, name='article')
+    path('article/', views.article, name='article')
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -5,8 +5,8 @@ from .models import Article
 from django.core.exceptions import ViewDoesNotExist
 
 # Create your views here.
-def welcome(request):
-  return render(request, 'welcome.html')
+# def welcome(request):
+#   return render(request, 'welcome.html')
 
 def news_of_day(request):
     date = dt.date.today()
