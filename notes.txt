@@ -70,7 +70,7 @@ __ERRORS__
 1. TypeError: __init__() missing 1 required positional argument: 'on_delete' >>> To solve this issue, you need to add the on_delete parameter.
 e.g.: parent = models.ForeignKey(Parent, on_delete=models.CASCADE) Refer:https://docs.djangoproject.com/en/3.2/ref/models/fields/#django.db.models.ForeignKey
 
-
+2. ERROR MSG>>It is impossible to add a non-nullable field 'article_image' to article without specifying a default. This is because the database needs something to populate existing rows. SOLUTION >>article_image = models.ImageField(upload_to = 'articles/', blank=True, null=True) >> http://www.dark-hamster.com/application/how-to-solve-error-message-you-are-trying-to-add-a-non-nullable-field-user-to-employee-without-a-default-in-django-application/
 
 
 __Basic Database Queries__
