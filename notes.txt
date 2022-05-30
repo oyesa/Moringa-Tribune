@@ -11,9 +11,10 @@ __START__
 -python3.8
 >>>import django
 >>>django.get_version()
--django-admin startproject <name of app>
+-Create a requirements.txt file 
+-django-admin startproject <name of project .> (add dot on the end)
 -python3.8 manage.py runserver
-
+-django-admin startapp <name of app> (no dot needed at the end)
 
 __DEFINING APP CONFIG. IN PROJECT__
 Step 1: define our applications configurations inside our project in settings.py
@@ -81,6 +82,9 @@ A model is basically a description of data in the database.
 A URLconf maps URL patterns to views.
 
 
+__How to override django templates__
+https://docs.djangoproject.com/en/dev/ref/contrib/admin/#overriding-admin-templates
+To override the default template you first need to access the template you want to modify from the django/contrib/admin/templates/admin directory. >> base.html
 
 
 

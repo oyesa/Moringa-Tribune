@@ -2,29 +2,58 @@
 {% block content %} 
 {{ block.super}}
 
-<div class="container">
 
+<!-- displaying News articles -->
+<!-- <div class="container"> -->
   <!-- Looping through news   -->
   {% for news_item in news %}
-
-  <div class="row">
-    <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ news_item.title }} </h2>
-    </div>
-    
+    <!-- <div class="container mt-5">
+    <div class="card" style="width: 18rem;"> -->
         <!--Display news Article images  -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <img src="{{news_item.article_image.url}}" class="img-responsive" alt="Image">
-        </div>
-    
+      <!-- <img src="{{news_item.article_image.url}}" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h4 class="card-text"> {{ news_item.title }} </h4>
       </div>
-  </div>
-
+    </div>
+  </div> -->
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="{{news_item.article_image.url}}" alt="image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ news_item.title }} </h5>
+                    <p class="card-text"> {{news_item.post}} </p>
+                    <small>Published on: {{news_item.pub_date}}</small>
+                    <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+  
   {% empty %}
-  <div class="row">
+  <div class="col-lg-6 mb-4">
+    <div class="card">
+        <img class="card-img-top" src="" alt="">
+
+        <div class="card-body">
+            <h5 class="card-title">No Title</h5>
+            <h2 class="card-text">There Are No News Items</h2>
+              
+            <a href="#" class="btn btn-outline-primary btn-sm">
+                Card link
+            </a>
+            <a href="#" class="btn btn-outline-secondary btn-sm">
+                <i class="far fa-heart"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+  
+  <!-- <div class="row">
     <h2 class="text-center">There Are No News Items</h2>
-  </div>
+  </div> -->
   {% endfor %}
 
 </div>

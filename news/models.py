@@ -26,7 +26,7 @@ class tags(models.Model):
 
 
 class Article(models.Model):
-    title = models.CharField(max_length =60)
+    title = models.CharField(max_length =160)
     post = models.TextField()
     editor = models.ForeignKey('Editor', on_delete=models.CASCADE)
     tags = models.ManyToManyField(tags)
@@ -48,4 +48,7 @@ class Article(models.Model):
     def search_by_title(cls,search_term):
         news = cls.objects.filter(title__icontains=search_term)
         return news
+
+    def __str__(self):
+        return self.title
 
