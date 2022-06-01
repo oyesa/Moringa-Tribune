@@ -87,4 +87,5 @@ https://docs.djangoproject.com/en/dev/ref/contrib/admin/#overriding-admin-templa
 To override the default template you first need to access the template you want to modify from the django/contrib/admin/templates/admin directory. >> base.html
 
 
-
+__DJANGO REGISTRATION__
+pip install django_registration_redux

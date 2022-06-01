@@ -3,16 +3,33 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 import datetime as dt
 from .models import Article, NewsLetterRecipients
 from django.core.exceptions import ViewDoesNotExist
-from .forms import NewsLetterForm
+from .forms import NewsLetterForm, NewArticleForm
 from .email import send_welcome_email
+from django.contrib.auth.decorators import login_required
 
 
 
 
-# Create your views here.
+
+@login_required(login_url='/accounts/login/')
+def new_article(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = NewArticleForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save(commit=False)
+            article.editor = current_user
+            article.save()
+        return redirect('NewsToday')
+
+    else:
+        form = NewArticleForm()
+    return render(request, 'new_article.html', {"form": form})
+
+
 def news_of_day(request):
-    date = dt.date.today()
-    return render(request, 'all-news/today-news.html', {"date": date,})
+        date = dt.date.today()
+        return render(request, 'all-news/today-news.html', {"date": date,})
 
 
 def past_days_news(request,past_date):
