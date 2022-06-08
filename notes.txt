@@ -1,6 +1,7 @@
 __OTHER REF RESOURCES__
 https://docs.djangoproject.com/en/4.0/intro/tutorial01/
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+https://django-registration.readthedocs.io/en/3.3/quickstart.html#quickstart
 
 
 __START__
